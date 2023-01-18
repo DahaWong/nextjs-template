@@ -2,30 +2,49 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "turbo": "next turbo",
+    "lint": "next lint",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "preview": "next build && next start",
+    "postinstall": "husky install",
+    "prettier": "yarn format:source",
+    "svgr": "npx @svgr/cli --out-dir src/components/icons --typescript --memo --icon 1em --replace-attr-values #000010=currentColor --svg-props  public/assets/icons"
   },
   "dependencies": {
     "@next/font": "^13.0.5",
-    "classnames": "^2.3.2",
+    "@vercel/og": "latest",
+    "classnames": "latest",
+    "debounce": "^1.2.1",
     "eslint-config-next": "^13.0.5",
-    "next": "^13.0.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "zustand": "^4.1.1"
+    "framer-motion": "latest",
+    "jotai": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.3.1",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@types/classnames": "^2.3.1",
+    "@types/debounce": "^1.2.1",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.7",
+    "eslint-plugin-tailwindcss": "^3.8.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
     "postcss": "^8.4.14",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.8.2",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.2.4",
-    "typescript": "4.8.3"
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  },
+  "packageManager": "yarn@3.3.1",
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,css}": "yarn prettier"
   }
 }

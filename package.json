@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "turbo": "next turbo",
+    "format:source": "prettier --config .prettierrc --write \"src/**/*.{js,ts,jsx,tsx,css}\"",
     "lint": "next lint",
     "build": "next build",
     "start": "next start",

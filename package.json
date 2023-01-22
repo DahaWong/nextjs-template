@@ -10,19 +10,19 @@
     "preview": "next build && next start",
     "postinstall": "husky install",
     "prettier": "yarn format:source",
-    "svgr": "npx @svgr/cli --out-dir src/components/icons --typescript --memo --icon 1em --replace-attr-values #000010=currentColor --svg-props  public/assets/icons"
+    "svgr": "npx @svgr/cli --out-dir src/components/icons --typescript --memo --icon 1em --replace-attr-values #000010=currentColor public/assets/icons"
   },
   "dependencies": {
     "@next/font": "^13.0.5",
     "@vercel/og": "latest",
     "classnames": "latest",
     "debounce": "^1.2.1",
-    "eslint-config-next": "^13.0.5",
     "framer-motion": "latest",
     "jotai": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "tailwind-merge": "^1.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
@@ -32,7 +32,14 @@
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
     "autoprefixer": "^10.4.7",
+    "eslint": "^8.32.0",
+    "eslint-config-next": "^13.1.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-tailwindcss": "^3.8.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0",

@@ -1,10 +1,20 @@
+// const addPwa = require("next-pwa");
+
 /** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true,
+
+// /** @type {import('next').NextConfig} */
+// const withPwa = addPwa({
+//   dest: "public",
+//   disable: process.env.NODE_ENV === "development",
+// });
+
+let nextConfig = {
+  // pageExtensions: ["ts", "tsx", "js", "jsx", "mdx"],
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  experimental: {
-    appDir: true,
-  },
 };
+
+// nextConfig = withPwa(nextConfig);
+
+module.exports = nextConfig;
